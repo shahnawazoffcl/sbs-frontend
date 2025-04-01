@@ -1,0 +1,73 @@
+
+
+<div class="booking-container">
+ 
+  <h2>Enter your Details to book your service appointment</h2>
+  <form  #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+    <label for="Name">Name:</label>
+    <input id="name" name="name" ngModel required minlength="3" />
+    <div *ngIf="form.submitted || form.controls['name']?.touched">
+      <div *ngIf="form.controls['name']?.errors?.['required']">
+        Name is required
+      </div>
+      <div *ngIf="form.controls['name']?.errors?.['minlength']">
+        Name must be at least 3 characters long
+      </div>
+    </div>
+
+    <label for="bikeModel">Bike Model:</label>
+    <input id="bikeModel" name="bikeModel" ngModel required minlength="3" />
+    <div *ngIf="form.submitted || form.controls['bikeModel']?.touched">
+      <div *ngIf="form.controls['bikeModel']?.errors?.['required']">
+        Bike Model is required
+      </div>
+      <div *ngIf="form.controls['bikeModel']?.errors?.['minlength']">
+        Bike model must be at least 3 characters long
+      </div>
+    </div>
+
+    <!-- <label for="serviceType">Service Type:</label>
+    <select id="serviceType" [(ngModel)]="serviceType" name="serviceType" required>
+      <option value="oil-change">Oil Change</option>
+      <option value="tire-replacement">Tire Replacement</option>
+      <option value="brake-repair">Brake Repair</option>
+    </select> -->
+
+    <label for="contactNumber">Contact Number</label>
+  <input id="contactNumber" name="contactNumber"
+    ngModel
+    required
+    pattern="^[0-9]{10}$"  
+  />
+  <div *ngIf="form.submitted || form.controls['contactNumber']?.touched">
+    <div *ngIf="form.controls['contactNumber']?.errors?.['required']">
+      Contact number is required.
+    </div>
+    <div *ngIf="form.controls['contactNumber']?.errors?.['pattern']">
+      Please enter a valid 10-digit phone number.
+    </div>
+  </div>
+
+
+    <label for="FullAddress">Full Address:</label>
+    <input id="FullAddress" name="FullAddress" ngModel required minlength="3" />
+    <div *ngIf="form.submitted || form.controls['FullAddress']?.touched">
+      <div *ngIf="form.controls['FullAddress']?.errors?.['required']">
+        Address is required
+      </div>
+      </div>
+
+      <div>
+        <label for="date">Select a Date:</label>
+        <select id="date" name="date" required [(ngModel)]="date">
+          <option *ngFor="let date of availableDates" [value]="date">
+            {{ date | date:'fullDate' }}
+          </option>
+        </select>
+        </div>
+      
+        <button type="submit" [disabled]="form.invalid" [disabled]="!date">Submit</button>
+      </form>
+      
+

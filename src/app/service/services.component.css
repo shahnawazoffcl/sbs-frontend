@@ -1,0 +1,161 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container for the Services page */
+  .services-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  /* Header section */
+  .services-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .services-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .services-header p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Services Description Section */
+  .services-description {
+    margin-bottom: 40px;
+  }
+  
+  .services-description h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .services-description p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .services-description ul {
+    list-style-type: none;
+    margin: 20px 0;
+    padding-left: 20px;
+  }
+  
+  .services-description li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Service Schedule Section */
+  .service-schedule {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  
+  .service-schedule h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .service-schedule p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .service-schedule strong {
+    color: #e74c3c;
+  }
+  
+  /* How It Works Section */
+  .how-it-works {
+    margin-bottom: 40px;
+  }
+  
+  .how-it-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .step {
+    flex: 1 1 30%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .step p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Footer section */
+  .services-footer {
+    text-align: center;
+    font-size: 1rem;
+    color: #999;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .services-header h1 {
+      font-size: 2rem;
+    }
+  
+    .services-description h2, .service-schedule h2, .how-it-works h2 {
+      font-size: 2rem;
+    }
+  
+    .steps {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .step {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .services-header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .services-description p, .service-schedule p, .step p {
+      font-size: 0.9rem;
+    }
+  
+    .step h3 {
+      font-size: 1.2rem;
+    }
+  }
+  
