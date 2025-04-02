@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BikeRepair } from '../models/bikeRepair';
+import { environment } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ import { BikeRepair } from '../models/bikeRepair';
 export class BookService {
   private isAuthenticated: boolean = false;
 
-  private apiServerUrl = 'http://localhost:8080/service';
+  private apiServerUrl = environment.apiUrl+'/service';
 
   constructor(private http: HttpClient) {}
 
