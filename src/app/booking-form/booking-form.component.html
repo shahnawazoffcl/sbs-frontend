@@ -51,9 +51,9 @@
 
 
     <label for="FullAddress">Full Address:</label>
-    <input id="FullAddress" name="FullAddress" ngModel required minlength="3" />
-    <div *ngIf="form.submitted || form.controls['FullAddress']?.touched">
-      <div *ngIf="form.controls['FullAddress']?.errors?.['required']">
+    <input id="address" name="address" ngModel required minlength="3" />
+    <div *ngIf="form.submitted || form.controls['address']?.touched">
+      <div *ngIf="form.controls['address']?.errors?.['required']">
         Address is required
       </div>
       </div>
