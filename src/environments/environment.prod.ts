@@ -1,6 +1,6 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://sbs-backend-production.up.railway.app',
+    apiUrl: 'https://doorstep-service.store/api1',
     otherVar: 'prodValue'
   };
   
